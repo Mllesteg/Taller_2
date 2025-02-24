@@ -26,71 +26,62 @@ public class Main {
             opcion = scanner.nextInt();
 
             switch (opcion) {
-                case 1:
+                case 1 -> {
 
                     System.out.print("Ingrese la denominación de la moneda (20, 50, 100, 200, 500): ");
                     int denominacion = scanner.nextInt();
                     switch (denominacion) {
-                        case 20:
+                        case 20 -> {
                             monedas20++;
                             System.out.println("Moneda de $20 agregada.");
-                            break;
-                        case 50:
+                        }
+                        case 50 -> {
                             monedas50++;
                             System.out.println("Moneda de $50 agregada.");
-                            break;
-                        case 100:
+                        }
+                        case 100 -> {
                             monedas100++;
                             System.out.println("Moneda de $100 agregada.");
-                            break;
-                        case 200:
+                        }
+                        case 200 -> {
                             monedas200++;
                             System.out.println("Moneda de $200 agregada.");
-                            break;
-                        case 500:
+                        }
+                        case 500 -> {
                             monedas500++;
                             System.out.println("Moneda de $500 agregada.");
-                            break;
-                        default:
-                            System.out.println("Denominación no válida.");
-                            break;
+                        }
+                        default -> System.out.println("Denominación no válida.");
                     }
-                    break;
+                }
+                case 2 -> {
 
-                case 2:
-                    // Ver cantidad de monedas
                     System.out.println("\nCantidad de monedas en la alcancía:");
                     System.out.println("$20: " + monedas20 + " monedas");
                     System.out.println("$50: " + monedas50 + " monedas");
                     System.out.println("$100: " + monedas100 + " monedas");
                     System.out.println("$200: " + monedas200 + " monedas");
                     System.out.println("$500: " + monedas500 + " monedas");
-                    break;
+                }
+                case 3 -> {
 
-                case 3:
-                    // Calcular total ahorrado
                     int total = (monedas20 * 20) + (monedas50 * 50) + (monedas100 * 100) + (monedas200 * 200) + (monedas500 * 500);
                     System.out.println("Total ahorrado: $" + total);
-                    break;
+                }
+                case 4 -> {
 
-                case 4:
-                    // Vaciar la alcancía
                     monedas20 = 0;
                     monedas50 = 0;
                     monedas100 = 0;
                     monedas200 = 0;
                     monedas500 = 0;
                     System.out.println("La alcancía ha sido vaciada.");
-                    break;
+                }
+                case 5 -> {
 
-                case 5:
-                    // Salir
                     System.out.println("Saliendo del programa...");
-                    break;
-
-                default:
-                    System.out.println("Opción no válida. Intente de nuevo.");
-                    break;
+                }
+                default -> System.out.println("Opción no válida. Intente de nuevo.");
             }
         } while (opcion != 5);
 
